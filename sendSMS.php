@@ -38,7 +38,7 @@ function getCurrentTime() {
         echo $smsResponse->getBulkId() . PHP_EOL;
 
         foreach ($smsResponse->getMessages() ?? [] as $message) {
-            echo sprintf('Message ID: %s, status: %s', $message->getMessageId(), $message->getStatus()?->getName()) . PHP_EOL;
+            echo sprintf('', $message->getMessageId(), $message->getStatus()?->getName()) . PHP_EOL;
         }
     } catch (Throwable $apiException) {
         echo("HTTP Code: " . $apiException->getCode() . "\n");
